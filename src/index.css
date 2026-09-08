@@ -39,3 +39,51 @@
   .floral-wash::before { opacity: .2; }
   .floral-wash::after { opacity: .2; }
 }
+
+/* Reference-matched lower-page composition */
+.about-reference-grid { display: grid; grid-template-columns: 60% 40%; min-height: 310px; }
+.about-story-panel { display: flex; align-items: center; gap: clamp(1.2rem, 4vw, 4rem); padding: 2.5rem clamp(1.5rem, 8vw, 7rem); background: #f9efeb; position: relative; overflow: hidden; }
+.about-story-panel::after { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .18; background: radial-gradient(circle at 3% 100%, #ba617b 0 3%, transparent 4%), radial-gradient(circle at 8% 85%, #e3a5b2 0 4%, transparent 5%), radial-gradient(circle at 18% 96%, #d9889e 0 3%, transparent 4%); }
+.about-photo-frame { position: relative; z-index: 1; flex: 0 0 clamp(150px, 18vw, 245px); height: 280px; border-radius: 145px 145px 0 0; overflow: hidden; align-self: end; }
+.about-photo-frame img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.about-copy { position: relative; z-index: 1; max-width: 430px; }
+.eyebrow { display: block; margin-bottom: .55rem; color: #8b263e; font-size: .66rem; font-weight: 700; letter-spacing: .18em; }
+.about-copy h3 { margin: 0 0 .7rem; color: #6f1e37; font: 400 clamp(1.8rem, 3vw, 2.65rem)/1.02 'Playfair Display', Georgia, serif; }
+.about-copy p { margin: 0 0 1rem; max-width: 390px; color: #765b62; font-size: .76rem; line-height: 1.6; }
+.reference-pill { display: inline-flex; align-items: center; gap: .45rem; border: 0; border-radius: 999px; padding: .68rem 1.35rem; background: #8b263e; color: white; font-size: .72rem; font-weight: 700; cursor: pointer; transition: transform .2s, background .2s; }
+.reference-pill:hover { background: #6f1e37; transform: translateY(-1px); }
+.about-belief-panel { position: relative; display: flex; flex-direction: column; justify-content: space-between; padding: 2.4rem clamp(1.5rem, 5vw, 5rem); overflow: hidden; background: #76203a; color: white; }
+.about-belief-panel::before { content: ''; position: absolute; width: 350px; height: 350px; right: -130px; bottom: -170px; border-radius: 50%; border: 1px solid rgba(255,255,255,.15); box-shadow: 0 0 0 25px rgba(255,255,255,.03), 0 0 0 52px rgba(255,255,255,.025); }
+.belief-icons { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(3, 1fr); padding-bottom: 1.7rem; border-bottom: 1px solid rgba(255,255,255,.25); }
+.belief-icons > div { display: flex; flex-direction: column; align-items: center; gap: .55rem; text-align: center; font-size: .68rem; line-height: 1.3; color: #f8dfe4; }
+.belief-icons > div + div { border-left: 1px solid rgba(255,255,255,.25); }
+.belief-icons svg { width: 1.35rem; height: 1.35rem; color: #f2bec9; }
+.belief-quote { position: relative; z-index: 1; padding-top: 1.5rem; }
+.belief-quote blockquote { margin: 0; font: italic 400 clamp(1.65rem, 3vw, 2.45rem)/1.12 'Playfair Display', Georgia, serif; }
+.belief-quote i { display: block; width: 2.5rem; height: 2px; margin-top: 1rem; background: #f2bec9; }
+.reference-cta { display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding: 1.55rem clamp(1.5rem, 8vw, 7rem); background: linear-gradient(105deg, #76203a, #9b3e59); color: white; position: relative; overflow: hidden; }
+.reference-cta::after { content: '✿'; position: absolute; right: 5%; bottom: -2rem; color: rgba(255,255,255,.12); font-size: 10rem; transform: rotate(15deg); }
+.reference-cta h3 { position: relative; z-index: 1; margin: 0; font: 400 clamp(1.6rem, 3vw, 2.35rem)/1.1 'Playfair Display', Georgia, serif; }
+.reference-cta p { position: relative; z-index: 1; margin: .35rem 0 0; color: #f9e7ea; font-size: .75rem; line-height: 1.4; }
+.cta-actions { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: .75rem; }
+.cta-light, .cta-outline { display: inline-flex; align-items: center; gap: .45rem; padding: .72rem 1.35rem; border-radius: 999px; font-size: .72rem; font-weight: 700; cursor: pointer; transition: transform .2s; }
+.cta-light { border: 0; background: white; color: #6f1e37; }
+.cta-outline { border: 1px solid rgba(255,255,255,.65); background: transparent; color: white; }
+.cta-light:hover, .cta-outline:hover { transform: translateY(-1px); }
+.reference-footer { background: #fcf8f5; border-top: 1px solid #ead9d8; color: #765b62; }
+.footer-inner { display: grid; grid-template-columns: 1.35fr 1fr 1.1fr 1.35fr 1fr; align-items: start; gap: 2rem; max-width: 1180px; margin: 0 auto; padding: 2.4rem clamp(1.5rem, 6vw, 5rem) 2.1rem; }
+.footer-brand { justify-self: start; border: 0; background: transparent; cursor: pointer; padding: 0; }
+.footer-column { display: flex; flex-direction: column; gap: .5rem; font-size: .69rem; }
+.footer-column h4 { margin: 0 0 .25rem; color: #2d1219; font: 700 .8rem 'DM Sans', sans-serif; }
+.footer-column button { width: fit-content; border: 0; padding: 0; background: transparent; color: #765b62; font: inherit; cursor: pointer; text-align: left; }
+.footer-column button:hover, .social-links a:hover { color: #8b263e; }
+.social-links { display: flex; gap: .8rem; color: #8b263e; }
+.social-links a { color: inherit; }
+.social-links svg { width: 1rem; height: 1rem; }
+.footer-social p { margin: .7rem 0 0; font-size: .68rem; line-height: 1.45; }
+.footer-rights { align-self: center; border-left: 1px solid #ead9d8; padding-left: 2rem; text-align: center; display: flex; flex-direction: column; gap: .2rem; font-size: .65rem; }
+.footer-rights strong { color: #6f1e37; font: 600 .76rem 'Playfair Display', Georgia, serif; }
+.footer-rights span { color: #8c6d75; }
+.footer-ornament { color: #8b263e; font-size: 1.5rem; line-height: 1; }
+@media (max-width: 900px) { .about-reference-grid { grid-template-columns: 1fr; } .about-belief-panel { min-height: 280px; } .footer-inner { grid-template-columns: repeat(4, 1fr); } .footer-brand { grid-row: span 2; } .footer-rights { grid-column: 4; } }
+@media (max-width: 640px) { .about-story-panel { align-items: flex-start; padding: 2rem 1.25rem; gap: 1rem; } .about-photo-frame { flex-basis: 112px; height: 210px; } .about-copy h3 { font-size: 1.65rem; } .about-copy p { font-size: .7rem; } .about-belief-panel { padding: 2rem 1.25rem; } .reference-cta { align-items: flex-start; flex-direction: column; padding: 1.65rem 1.25rem; } .footer-inner { grid-template-columns: repeat(2, 1fr); gap: 1.7rem 1.2rem; padding: 2rem 1.25rem 5rem; } .footer-brand { grid-column: span 2; } .footer-rights { grid-column: span 2; border-left: 0; border-top: 1px solid #ead9d8; padding: 1rem 0 0; } }
