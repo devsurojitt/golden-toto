@@ -29,11 +29,11 @@ export const ModelShowcase: React.FC<ModelShowcaseProps> = ({
   const threeModels = displayModels.length === 3 ? displayModels : models.slice(0, 3);
 
   return (
-    <section id="models-showcase" className="py-12 sm:py-16 bg-[#FAF6F0]">
+    <section id="models-showcase" className="floral-wash py-12 sm:py-16 bg-[#fcf8f5]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Centered Heading with Botanical Leaf Motif matching Reference Image */}
-        <div className="relative text-center mb-10 sm:mb-12">
+        <div className="relative text-center mb-8 sm:mb-10">
           {/* Decorative Three-Leaf Emblem */}
           <div className="inline-flex items-center justify-center text-[#8B263E] mb-2.5" aria-hidden="true">
             <svg width="34" height="26" viewBox="0 0 40 30" fill="currentColor">
@@ -43,7 +43,7 @@ export const ModelShowcase: React.FC<ModelShowcaseProps> = ({
             </svg>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-normal text-[#2D1219] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-normal text-[#71253e] tracking-tight">
             Our EV Models
           </h2>
           <p className="text-sm sm:text-base text-[#73525A] mt-2 font-normal">
@@ -63,7 +63,7 @@ export const ModelShowcase: React.FC<ModelShowcaseProps> = ({
         </div>
 
         {/* 3 Model Cards Grid in one row on desktop */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
           {threeModels.map((model) => (
             <ProductCard
               key={model.id}
@@ -76,7 +76,7 @@ export const ModelShowcase: React.FC<ModelShowcaseProps> = ({
         {/* Section 4: Horizontal Feature Strip matching Reference Image */}
         <div 
           id="feature-strip"
-          className="mt-12 sm:mt-16 bg-white border border-[#EBDCD4] rounded-2xl p-5 sm:p-7 shadow-sm"
+          className="mt-10 sm:mt-12 bg-white/70 border border-[#ead9d8] rounded-2xl p-4 sm:p-6 shadow-sm"
         >
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-4 divide-y sm:divide-y-0 lg:divide-x divide-[#F0E4DE]">
             {/* 1. Eco Friendly */}

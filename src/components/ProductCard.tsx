@@ -1,120 +1,27 @@
 import React from 'react';
 import { EVModel } from '../types';
 import { ScooterVisual } from './ScooterVisual';
-import { 
-  Clock, 
-  BatteryMedium, 
-  Gauge, 
-  ArrowRight
-} from 'lucide-react';
+import { BatteryMedium, Gauge, MapPin, ArrowRight } from 'lucide-react';
 
-interface ProductCardProps {
-  model: EVModel;
-  onViewDetails: (slug: string) => void;
-}
+interface ProductCardProps { model: EVModel; onViewDetails: (slug: string) => void; }
 
-export const ProductCard: React.FC<ProductCardProps> = ({
-  model,
-  onViewDetails,
-}) => {
-  // Determine colorway based on model slug
-  const colorway = model.slug === 'golden-e2' 
-    ? 'pearl-white' 
-    : model.slug === 'golden-e3' 
-    ? 'matte-black' 
-    : 'dusty-rose';
-
-  return (
-    <div 
-      id={`product-card-${model.slug}`}
-      className="group relative flex flex-col bg-white rounded-3xl border border-[#EBDCD4] hover:border-[#8B263E]/40 shadow-sm hover:shadow-xl hover:shadow-[#8B263E]/10 transition-all duration-300 overflow-hidden"
-    >
-      {/* Top Left Badge (Best Value / Most Popular / Premium) matching Reference Image */}
-      {model.badge && (
-        <div className="absolute top-4 left-4 z-10">
-          <span className="inline-block text-[11px] font-semibold px-3 py-1 rounded-full bg-[#8B263E] text-white shadow-sm tracking-wide">
-            {model.badge}
-          </span>
-        </div>
-      )}
-
-      {/* Scooter Presentation Stage with Clean Light Background */}
-      <div 
-        onClick={() => onViewDetails(model.slug)}
-        className="relative aspect-[16/11] w-full overflow-hidden cursor-pointer bg-gradient-to-b from-[#FAF8F5] via-[#F6EEEA] to-[#F1E5E0] flex items-center justify-center p-4 pt-6"
-      >
-        <div className="w-[85%] h-[85%] flex items-center justify-center transition-transform duration-500 group-hover:scale-105">
-          <ScooterVisual colorway={colorway} className="w-full h-full" />
-        </div>
+export const ProductCard: React.FC<ProductCardProps> = ({ model, onViewDetails }) => {
+  const colorway = model.slug === 'golden-e2' ? 'pearl-white' : model.slug === 'golden-e3' ? 'matte-black' : 'dusty-rose';
+  return <article id={`product-card-${model.slug}`} className="group relative flex flex-col overflow-hidden rounded-2xl border border-[#eadcda] bg-white/80 shadow-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-[#8d2946]/10">
+    {model.badge && <span className="absolute left-3 top-3 z-10 rounded-full bg-[#8d2946] px-3 py-1 text-[10px] font-bold text-white">{model.badge}</span>}
+    <button onClick={() => onViewDetails(model.slug)} className="relative flex aspect-[1.35] w-full cursor-pointer items-center justify-center overflow-hidden bg-gradient-to-b from-[#fffdfb] to-[#f5ece9] px-6 pt-6">
+      <div className="h-full w-full transition duration-500 group-hover:scale-105"><ScooterVisual colorway={colorway} className="h-full w-full" /></div>
+    </button>
+    <div className="flex flex-1 flex-col p-4 text-center sm:p-5">
+      <h3 onClick={() => onViewDetails(model.slug)} className="cursor-pointer font-serif text-lg font-semibold text-[#3b2028] transition group-hover:text-[#8d2946] sm:text-xl">{model.name}</h3>
+      <p className="mt-0.5 text-[11px] text-[#765b62]">{model.tagline}</p>
+      <div className="mt-2"><strong className="block text-lg font-bold text-[#8d2946] sm:text-xl">{model.priceDisplay}</strong><span className="text-[9px] uppercase tracking-wider text-[#987b82]">Starting Price</span></div>
+      <div className="my-4 grid grid-cols-3 border-y border-[#efe2df] py-3">
+        <div className="flex flex-col items-center gap-0.5"><MapPin className="h-3.5 w-3.5 text-[#8d2946]" /><b className="text-[10px] text-[#3b2028] sm:text-xs">{model.specs.rangeIdc}</b><span className="text-[9px] text-[#765b62]">Range</span></div>
+        <div className="flex flex-col items-center gap-0.5 border-x border-[#efe2df]"><BatteryMedium className="h-3.5 w-3.5 text-[#8d2946]" /><b className="text-[10px] text-[#3b2028] sm:text-xs">{model.specs.batteryCapacity}</b><span className="text-[9px] text-[#765b62]">Battery</span></div>
+        <div className="flex flex-col items-center gap-0.5"><Gauge className="h-3.5 w-3.5 text-[#8d2946]" /><b className="text-[10px] text-[#3b2028] sm:text-xs">{model.specs.topSpeed}</b><span className="text-[9px] text-[#765b62]">Top Speed</span></div>
       </div>
-
-      {/* Card Body */}
-      <div className="p-6 flex-1 flex flex-col justify-between text-center">
-        <div>
-          {/* Model Title */}
-          <h3 
-            onClick={() => onViewDetails(model.slug)}
-            className="text-2xl font-serif font-bold text-[#2D1219] group-hover:text-[#8B263E] transition-colors cursor-pointer"
-          >
-            {model.name}
-          </h3>
-
-          {/* Model Tagline */}
-          <p className="text-xs sm:text-sm text-[#73525A] mt-1 mb-3">
-            {model.tagline}
-          </p>
-
-          {/* Price Display */}
-          <div className="mb-5">
-            <span className="text-2xl sm:text-3xl font-serif font-bold text-[#8B263E] block leading-tight">
-              {model.priceDisplay}
-            </span>
-            <span className="text-[11px] text-[#8C6D75] uppercase tracking-wider font-semibold">
-              Starting Price
-            </span>
-          </div>
-
-          {/* 3 Specifications with Icons matching Reference */}
-          <div className="grid grid-cols-3 gap-1 py-3.5 border-t border-b border-[#F0E4DE] text-center mb-6">
-            {/* Range */}
-            <div className="flex flex-col items-center">
-              <div className="flex items-center gap-1 text-[#8B263E] mb-1">
-                <Clock className="w-3.5 h-3.5" />
-                <span className="text-xs font-bold text-[#2D1219]">{model.specs.rangeIdc}</span>
-              </div>
-              <span className="text-[10px] text-[#73525A] font-medium">Range</span>
-            </div>
-
-            {/* Battery */}
-            <div className="flex flex-col items-center border-x border-[#F0E4DE]">
-              <div className="flex items-center gap-1 text-[#8B263E] mb-1">
-                <BatteryMedium className="w-3.5 h-3.5" />
-                <span className="text-xs font-bold text-[#2D1219]">{model.specs.batteryCapacity}</span>
-              </div>
-              <span className="text-[10px] text-[#73525A] font-medium">Battery</span>
-            </div>
-
-            {/* Top Speed */}
-            <div className="flex flex-col items-center">
-              <div className="flex items-center gap-1 text-[#8B263E] mb-1">
-                <Gauge className="w-3.5 h-3.5" />
-                <span className="text-xs font-bold text-[#2D1219]">{model.specs.topSpeed}</span>
-              </div>
-              <span className="text-[10px] text-[#73525A] font-medium">Top Speed</span>
-            </div>
-          </div>
-        </div>
-
-        {/* View Details Button matching Reference Image */}
-        <button
-          id={`btn-view-details-${model.slug}`}
-          onClick={() => onViewDetails(model.slug)}
-          className="w-full py-3 px-4 rounded-full bg-[#8B263E] hover:bg-[#731E32] text-white font-semibold text-sm flex items-center justify-center gap-2 transition-all shadow-md shadow-[#8B263E]/20 active:scale-95 cursor-pointer"
-        >
-          <span>View Details</span>
-          <ArrowRight className="w-4 h-4" />
-        </button>
-      </div>
+      <button onClick={() => onViewDetails(model.slug)} className="mt-auto inline-flex w-full items-center justify-center gap-1.5 rounded-full bg-[#8d2946] py-2.5 text-[11px] font-bold text-white transition hover:bg-[#6f1e37] active:scale-95">View Details <ArrowRight className="h-3.5 w-3.5" /></button>
     </div>
-  );
+  </article>;
 };
