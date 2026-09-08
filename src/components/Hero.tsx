@@ -7,7 +7,7 @@ interface HeroProps { onExploreModels: () => void; onBookTestRide: () => void; }
 export const Hero: React.FC<HeroProps> = ({ onExploreModels, onBookTestRide }) => (
   <section id="hero-section" className="relative overflow-hidden bg-[#f6e2e1] pt-[76px]">
     <div className="relative min-h-[470px] sm:min-h-[540px] lg:min-h-[590px]">
-      <img src="/assets/shanta-hero.jpg" alt="Dusty rose Golden Toto electric scooter in a floral studio" className="absolute inset-0 h-full w-full object-cover object-[63%_center]" />
+      <img src="./assets/shanta-hero.jpg" alt="Dusty rose Golden Toto electric scooter in a floral studio" className="absolute inset-0 h-full w-full object-cover object-[63%_center]" />
       <div className="absolute inset-0 bg-gradient-to-r from-[#f8e9e6]/95 via-[#f8e9e6]/75 to-transparent lg:via-[#f8e9e6]/50" />
       <div className="absolute right-0 top-0 hidden h-full w-[24%] bg-gradient-to-l from-[#6f1e37]/75 to-transparent lg:block" />
       <div className="relative z-10 mx-auto flex min-h-[470px] max-w-[1440px] items-center px-6 py-14 sm:min-h-[540px] sm:px-12 lg:min-h-[590px] lg:px-20 xl:px-28">

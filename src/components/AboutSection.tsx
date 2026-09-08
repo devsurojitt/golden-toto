@@ -37,13 +37,13 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
             {/* Arched Lifestyle Photo Frame with Floral Theme */}
             <div className="relative w-48 sm:w-56 h-64 sm:h-76 shrink-0 rounded-t-full rounded-b-2xl overflow-hidden border-2 border-[#EBDCD4] shadow-md bg-[#F6ECE8] flex items-center justify-center">
               <img
-                src="/assets/shanta-about.jpg"
+                src="./assets/shanta-about.jpg"
                 alt="A Cleaner, Brighter Tomorrow with Golden Toto"
                 className="w-full h-full object-cover object-center"
                 referrerPolicy="no-referrer"
                 onError={(e) => {
                   // Clean fallback if needed
-                  e.currentTarget.src = "/assets/shanta-about.jpg";
+                  e.currentTarget.src = "./assets/shanta-about.jpg";
                 }}
               />
               {/* Subtle floral tone overlay */}

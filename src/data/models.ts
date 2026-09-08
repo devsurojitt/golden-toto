@@ -11,7 +11,7 @@ export const GOLDEN_TOTO_MODELS: EVModel[] = [
     startingPrice: 84999,
     priceDisplay: '₹ 84,999',
     badge: 'Best Value',
-    heroImage: '/assets/golden-e1.jpg',
+    heroImage: './assets/golden-e1.jpg',
     specs: {
       price: 84999,
       priceDisplay: '₹ 84,999',
@@ -38,19 +38,19 @@ export const GOLDEN_TOTO_MODELS: EVModel[] = [
         name: 'Dusty Rose & Blush',
         hex: '#C88A96',
         secondaryHex: '#FAF6F0',
-        image: '/assets/golden-e1.jpg'
+        image: './assets/golden-e1.jpg'
       },
       {
         name: 'Pearl White & Chrome',
         hex: '#FDFBF7',
         secondaryHex: '#E2D9CE',
-        image: '/assets/golden-e2.jpg'
+        image: './assets/golden-e2.jpg'
       },
       {
         name: 'Midnight Noir',
         hex: '#2B1B20',
         secondaryHex: '#8B263E',
-        image: '/assets/golden-e3.jpg'
+        image: './assets/golden-e3.jpg'
       }
     ],
     highlights: [
@@ -77,15 +77,15 @@ export const GOLDEN_TOTO_MODELS: EVModel[] = [
     ],
     gallery: [
       {
-        url: '/assets/golden-e1.jpg',
+        url: './assets/golden-e1.jpg',
         caption: 'Ergonomic commuter riding posture'
       },
       {
-        url: '/assets/golden-e2.jpg',
+        url: './assets/golden-e2.jpg',
         caption: 'Spacious flat footboard with bag hook'
       },
       {
-        url: '/assets/golden-e3.jpg',
+        url: './assets/golden-e3.jpg',
         caption: 'Bright LED projector beam headlamp'
       }
     ]
@@ -100,7 +100,7 @@ export const GOLDEN_TOTO_MODELS: EVModel[] = [
     startingPrice: 104999,
     priceDisplay: '₹ 1,04,999',
     badge: 'Most Popular',
-    heroImage: '/assets/golden-e2.jpg',
+    heroImage: './assets/golden-e2.jpg',
     specs: {
       price: 104999,
       priceDisplay: '₹ 1,04,999',
@@ -127,19 +127,19 @@ export const GOLDEN_TOTO_MODELS: EVModel[] = [
         name: 'Pearl White & Rose Gold',
         hex: '#F9F6F0',
         secondaryHex: '#D4AF37',
-        image: '/assets/golden-e2.jpg'
+        image: './assets/golden-e2.jpg'
       },
       {
         name: 'Dusty Rose Metallic',
         hex: '#C88A96',
         secondaryHex: '#3A141D',
-        image: '/assets/golden-e1.jpg'
+        image: './assets/golden-e1.jpg'
       },
       {
         name: 'Royal Wine Maroon',
         hex: '#8B263E',
         secondaryHex: '#1C080E',
-        image: '/assets/golden-e3.jpg'
+        image: './assets/golden-e3.jpg'
       }
     ],
     highlights: [
@@ -166,15 +166,15 @@ export const GOLDEN_TOTO_MODELS: EVModel[] = [
     ],
     gallery: [
       {
-        url: '/assets/golden-e2.jpg',
+        url: './assets/golden-e2.jpg',
         caption: 'Sleek aerodynamic profile in Pearl White'
       },
       {
-        url: '/assets/golden-e1.jpg',
+        url: './assets/golden-e1.jpg',
         caption: 'Generous cushioned seat for two adults'
       },
       {
-        url: '/assets/golden-e3.jpg',
+        url: './assets/golden-e3.jpg',
         caption: 'Digital LCD dash with real-time range estimation'
       }
     ]
@@ -189,7 +189,7 @@ export const GOLDEN_TOTO_MODELS: EVModel[] = [
     startingPrice: 134999,
     priceDisplay: '₹ 1,34,999',
     badge: 'Premium',
-    heroImage: '/assets/golden-e3.jpg',
+    heroImage: './assets/golden-e3.jpg',
     specs: {
       price: 134999,
       priceDisplay: '₹ 1,34,999',
@@ -216,19 +216,19 @@ export const GOLDEN_TOTO_MODELS: EVModel[] = [
         name: 'Matte Obsidian Black',
         hex: '#18181B',
         secondaryHex: '#8B263E',
-        image: '/assets/golden-e3.jpg'
+        image: './assets/golden-e3.jpg'
       },
       {
         name: 'Rose Gold & Wine',
         hex: '#8B263E',
         secondaryHex: '#D4AF37',
-        image: '/assets/golden-e1.jpg'
+        image: './assets/golden-e1.jpg'
       },
       {
         name: 'Pearl Glacier White',
         hex: '#FAF6F0',
         secondaryHex: '#27272A',
-        image: '/assets/golden-e2.jpg'
+        image: './assets/golden-e2.jpg'
       }
     ],
     highlights: [
@@ -255,15 +255,15 @@ export const GOLDEN_TOTO_MODELS: EVModel[] = [
     ],
     gallery: [
       {
-        url: '/assets/golden-e3.jpg',
+        url: './assets/golden-e3.jpg',
         caption: 'Commanding matte black presence'
       },
       {
-        url: '/assets/golden-e1.jpg',
+        url: './assets/golden-e1.jpg',
         caption: 'High-visibility twin projector lights'
       },
       {
-        url: '/assets/golden-e2.jpg',
+        url: './assets/golden-e2.jpg',
         caption: 'Alloy wheels with tubeless tires'
       }
     ]
@@ -278,7 +278,7 @@ export const GOLDEN_TOTO_MODELS: EVModel[] = [
     startingPrice: 149999,
     priceDisplay: '₹ 1,49,999',
     badge: 'Commercial Hero',
-    heroImage: '/assets/golden-e3.jpg',
+    heroImage: './assets/golden-e3.jpg',
     specs: {
       price: 149999,
       priceDisplay: '₹ 1,49,999',
@@ -305,13 +305,13 @@ export const GOLDEN_TOTO_MODELS: EVModel[] = [
         name: 'Heritage Maroon & Champagne',
         hex: '#8B263E',
         secondaryHex: '#D4AF37',
-        image: '/assets/golden-e3.jpg'
+        image: './assets/golden-e3.jpg'
       },
       {
         name: 'Ivory Cream & Burgundy',
         hex: '#FAF6F0',
         secondaryHex: '#8B263E',
-        image: '/assets/golden-e3.jpg'
+        image: './assets/golden-e3.jpg'
       }
     ],
     highlights: [
@@ -333,7 +333,7 @@ export const GOLDEN_TOTO_MODELS: EVModel[] = [
     ],
     gallery: [
       {
-        url: '/assets/golden-e3.jpg',
+        url: './assets/golden-e3.jpg',
         caption: 'Spacious passenger cabin with deep cushioned bench seating'
       }
     ]

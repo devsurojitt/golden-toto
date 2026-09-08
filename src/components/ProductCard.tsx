@@ -5,7 +5,7 @@ import { BatteryMedium, Gauge, MapPin, ArrowRight } from 'lucide-react';
 interface ProductCardProps { model: EVModel; onViewDetails: (slug: string) => void; }
 
 export const ProductCard: React.FC<ProductCardProps> = ({ model, onViewDetails }) => {
-  const asset = model.slug === 'golden-e2' ? '/assets/golden-e2.jpg' : model.slug === 'golden-e3' ? '/assets/golden-e3.jpg' : '/assets/golden-e1.jpg';
+  const asset = model.slug === 'golden-e2' ? './assets/golden-e2.jpg' : model.slug === 'golden-e3' ? './assets/golden-e3.jpg' : './assets/golden-e1.jpg';
   return <article id={`product-card-${model.slug}`} className="group relative flex flex-col overflow-hidden rounded-2xl border border-[#eadcda] bg-white/80 shadow-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-[#8d2946]/10">
     {model.badge && <span className="absolute left-3 top-3 z-10 rounded-full bg-[#8d2946] px-3 py-1 text-[10px] font-bold text-white">{model.badge}</span>}
     <button onClick={() => onViewDetails(model.slug)} className="relative flex aspect-[1.35] w-full cursor-pointer items-center justify-center overflow-hidden bg-gradient-to-b from-[#fffdfb] to-[#f5ece9] px-3 pt-3">
