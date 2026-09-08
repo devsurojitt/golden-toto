@@ -87,3 +87,26 @@
 .footer-ornament { color: #8b263e; font-size: 1.5rem; line-height: 1; }
 @media (max-width: 900px) { .about-reference-grid { grid-template-columns: 1fr; } .about-belief-panel { min-height: 280px; } .footer-inner { grid-template-columns: repeat(4, 1fr); } .footer-brand { grid-row: span 2; } .footer-rights { grid-column: 4; } }
 @media (max-width: 640px) { .about-story-panel { align-items: flex-start; padding: 2rem 1.25rem; gap: 1rem; } .about-photo-frame { flex-basis: 112px; height: 210px; } .about-copy h3 { font-size: 1.65rem; } .about-copy p { font-size: .7rem; } .about-belief-panel { padding: 2rem 1.25rem; } .reference-cta { align-items: flex-start; flex-direction: column; padding: 1.65rem 1.25rem; } .footer-inner { grid-template-columns: repeat(2, 1fr); gap: 1.7rem 1.2rem; padding: 2rem 1.25rem 5rem; } .footer-brand { grid-column: span 2; } .footer-rights { grid-column: span 2; border-left: 0; border-top: 1px solid #ead9d8; padding: 1rem 0 0; } }
+
+/* Fine alignment for the reference's compact model row */
+#models-showcase { padding-top: 2.1rem; padding-bottom: 2.2rem; }
+#models-showcase > div { max-width: 1180px; }
+#models-showcase .grid.grid-cols-1.md\:grid-cols-3 { gap: 1rem; }
+#models-showcase article { border-radius: .75rem; }
+#models-showcase article > button { aspect-ratio: 1.7; padding: .35rem 1.2rem 0; }
+#models-showcase article > div { padding: .65rem .9rem .8rem; }
+#models-showcase article h3 { font-size: 1rem; }
+#models-showcase article .my-4 { margin-top: .65rem; margin-bottom: .65rem; padding-top: .55rem; padding-bottom: .55rem; }
+#models-showcase article .my-4 svg { width: .8rem; height: .8rem; }
+#feature-strip { margin-top: 1.25rem; border-radius: .8rem; padding: .75rem 1rem; }
+#feature-strip > div { gap: 0; }
+#feature-strip > div > div { padding: .45rem .8rem; gap: .55rem; }
+#feature-strip > div > div > div:first-child { width: 1.75rem; height: 1.75rem; }
+#feature-strip h4 { font-size: .68rem; }
+#feature-strip p { font-size: .58rem; }
+@media (max-width: 640px) {
+  #models-showcase { padding-top: 1.75rem; }
+  #models-showcase article > button { aspect-ratio: 1.4; }
+  #feature-strip { padding: .65rem; }
+  #feature-strip > div > div { padding-inline: .25rem; }
+}
