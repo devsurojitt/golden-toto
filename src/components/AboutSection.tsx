@@ -25,7 +25,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
   };
 
   return (
-    <section id="about-brand-section" className="py-12 sm:py-16 bg-[#FAF6F0]">
+    <section id="about-brand-section" className="floral-wash py-12 sm:py-16 bg-[#fcf8f5]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-14">
         
         {/* Section 5: Split About Container matching Reference Image */}
@@ -37,13 +37,13 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
             {/* Arched Lifestyle Photo Frame with Floral Theme */}
             <div className="relative w-48 sm:w-56 h-64 sm:h-76 shrink-0 rounded-t-full rounded-b-2xl overflow-hidden border-2 border-[#EBDCD4] shadow-md bg-[#F6ECE8] flex items-center justify-center">
               <img
-                src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80"
+                src="/assets/shanta-about.jpg"
                 alt="A Cleaner, Brighter Tomorrow with Golden Toto"
                 className="w-full h-full object-cover object-center"
                 referrerPolicy="no-referrer"
                 onError={(e) => {
                   // Clean fallback if needed
-                  e.currentTarget.src = "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80";
+                  e.currentTarget.src = "/assets/shanta-about.jpg";
                 }}
               />
               {/* Subtle floral tone overlay */}
