@@ -1,0 +1,7 @@
+{
+  "name": "Golden Toto — EV Showroom",
+  "description": "A premium, mobile-first web showroom where buyers explore, compare, and book test rides for Golden Toto's electric scooter and EV toto models.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
