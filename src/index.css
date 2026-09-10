@@ -110,3 +110,47 @@
   #feature-strip { padding: .65rem; }
   #feature-strip > div > div { padding-inline: .25rem; }
 }
+
+/* Final lower-page proportions based on the supplied full-page reference */
+.about-reference-grid { min-height: 285px; }
+.about-story-panel { gap: clamp(1rem, 3.2vw, 3.2rem); padding: 1.8rem clamp(1.25rem, 6vw, 5.5rem); }
+.about-photo-frame { flex-basis: clamp(145px, 17vw, 215px); height: 245px; border-radius: 120px 120px 0 0; }
+.about-copy { max-width: 360px; }
+.about-copy h3 { font-size: clamp(1.55rem, 2.6vw, 2.25rem); }
+.about-copy p { font-size: .7rem; line-height: 1.48; margin-bottom: .75rem; }
+.about-belief-panel { padding: 1.75rem clamp(1.25rem, 4.5vw, 4rem); }
+.belief-icons { padding-bottom: 1.2rem; }
+.belief-icons > div { font-size: .62rem; }
+.belief-quote { padding-top: 1.2rem; }
+.belief-quote blockquote { font-size: clamp(1.5rem, 2.7vw, 2.2rem); }
+.reference-cta { padding-top: 1.35rem; padding-bottom: 1.35rem; }
+.reference-cta h3 { font-size: clamp(1.45rem, 2.5vw, 2.1rem); }
+.reference-footer { min-height: 154px; }
+.footer-inner { max-width: 1180px; grid-template-columns: 1.2fr 1.15fr 1.15fr 1.15fr 1fr; gap: 1.5rem; padding: 1rem clamp(1.25rem, 5vw, 4.5rem) 1.35rem; align-items: center; }
+.footer-logo { width: 132px; height: 100px; object-fit: contain; }
+.footer-brand { align-self: center; }
+.footer-column { gap: .35rem; font-size: .64rem; }
+.footer-column h4 { font-size: .72rem; margin-bottom: .18rem; }
+.footer-social p { margin-top: .45rem; font-size: .61rem; }
+.social-links { gap: .65rem; }
+.social-links svg { width: .85rem; height: .85rem; }
+.footer-rights { padding-left: 1.4rem; font-size: .59rem; }
+.footer-rights strong { font-size: .7rem; }
+.footer-ornament { font-size: 1.3rem; }
+@media (max-width: 900px) {
+  .footer-inner { grid-template-columns: repeat(4, 1fr); padding-top: 1.5rem; padding-bottom: 1.5rem; }
+  .footer-brand { grid-row: span 2; }
+  .footer-rights { grid-column: 4; }
+}
+@media (max-width: 640px) {
+  .about-story-panel { padding: 1.5rem 1rem; gap: .8rem; }
+  .about-photo-frame { flex-basis: 105px; height: 190px; }
+  .about-copy h3 { font-size: 1.5rem; }
+  .about-copy p { font-size: .66rem; }
+  .about-belief-panel { min-height: 245px; padding: 1.6rem 1rem; }
+  .reference-cta { padding: 1.5rem 1rem; }
+  .footer-inner { grid-template-columns: repeat(2, 1fr); gap: 1.3rem .8rem; padding: 1.5rem 1rem 4rem; }
+  .footer-brand { grid-column: span 2; grid-row: auto; justify-self: center; }
+  .footer-logo { width: 150px; height: 92px; }
+  .footer-rights { grid-column: span 2; border-left: 0; border-top: 1px solid #ead9d8; padding: .8rem 0 0; }
+}
