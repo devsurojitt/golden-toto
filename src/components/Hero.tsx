@@ -13,7 +13,10 @@ export const Hero: React.FC<HeroProps> = ({ onExploreModels, onBookTestRide }) =
       <div className="relative z-10 mx-auto flex min-h-[470px] max-w-[1440px] items-center px-6 py-14 sm:min-h-[540px] sm:px-12 lg:min-h-[590px] lg:px-20 xl:px-28">
         <div className="max-w-[510px]">
           <span className="mb-3 block text-[10px] font-bold tracking-[.18em] text-[#8d2946] sm:text-xs">CLEANER ROADS&nbsp; • &nbsp;BRIGHTER TOMORROW</span>
-          <h1 className="text-5xl font-normal leading-[.98] text-[#71253e] sm:text-6xl lg:text-7xl">Ride a<br /><span className="text-[#8d2946]">Greener Future</span></h1>
+          <div className="hero-title-wrap">
+            <h1 className="text-5xl font-normal leading-[.98] text-[#71253e] sm:text-6xl lg:text-7xl">Ride a<br /><span className="text-[#8d2946]">Greener Future</span></h1>
+            <span className="hero-flower-mark" aria-hidden="true"><i /><i /><i /><b /></span>
+          </div>
           <p className="mt-5 max-w-md text-sm leading-relaxed text-[#725a61] sm:text-base">Golden Toto&apos;s electric scooters are built for a smarter, cleaner and better tomorrow.</p>
           <div className="mt-7 flex flex-wrap gap-3">
             <button onClick={onExploreModels} className="inline-flex items-center gap-2 rounded-full bg-[#8d2946] px-6 py-3 text-xs font-bold text-white shadow-lg shadow-[#8d2946]/20 transition hover:bg-[#6f1e37] active:scale-95">Explore Models <ArrowRight className="h-4 w-4" /></button>

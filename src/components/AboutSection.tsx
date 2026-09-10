@@ -37,6 +37,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onBookTestRide, onVi
             <div><Settings /><span>Trusted<br />Support</span></div>
           </div>
           <div className="belief-quote">
+            <span className="quote-flower-mark" aria-hidden="true"><i /><i /><i /><b /></span>
             <blockquote>“Drive Change,<br />Not Pollution.”</blockquote>
             <i />
           </div>

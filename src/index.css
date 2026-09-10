@@ -154,3 +154,22 @@
   .footer-logo { width: 150px; height: 92px; }
   .footer-rights { grid-column: span 2; border-left: 0; border-top: 1px solid #ead9d8; padding: .8rem 0 0; }
 }
+
+/* Botanical details and color grade from the supplied reference */
+.hero-title-wrap { position: relative; display: inline-block; }
+.hero-flower-mark, .quote-flower-mark { position: absolute; display: block; width: 2.9rem; height: 2.7rem; opacity: .82; }
+.hero-flower-mark { right: -3.25rem; bottom: .1rem; transform: rotate(-12deg); }
+.hero-flower-mark i, .quote-flower-mark i { position: absolute; display: block; width: 1.05rem; height: 1.55rem; border-radius: 100% 0 100% 0; background: #c8798d; transform-origin: bottom center; }
+.hero-flower-mark i:nth-child(1), .quote-flower-mark i:nth-child(1) { left: .88rem; top: 0; transform: rotate(4deg); }
+.hero-flower-mark i:nth-child(2), .quote-flower-mark i:nth-child(2) { left: .18rem; top: .65rem; transform: rotate(-48deg) scale(.82); background: #d995a4; }
+.hero-flower-mark i:nth-child(3), .quote-flower-mark i:nth-child(3) { right: .05rem; top: .62rem; transform: rotate(48deg) scale(.82); background: #b96079; }
+.hero-flower-mark b, .quote-flower-mark b { position: absolute; left: 1.18rem; bottom: .22rem; width: .48rem; height: .48rem; border-radius: 50%; background: #8b263e; box-shadow: 0 0 0 .18rem rgba(255,255,255,.45); }
+.hero-title-wrap::after { content: ''; position: absolute; left: -6rem; bottom: -8.4rem; width: 9rem; height: 6rem; opacity: .55; background: radial-gradient(ellipse at 20% 70%, #d995a4 0 7%, transparent 8%), radial-gradient(ellipse at 42% 45%, #c8798d 0 9%, transparent 10%), radial-gradient(ellipse at 75% 70%, #dfa9b4 0 8%, transparent 9%); filter: blur(.2px); pointer-events: none; }
+.quote-flower-mark { top: -1.05rem; right: 1.2rem; transform: rotate(18deg) scale(.72); opacity: .7; }
+.about-story-panel::before { content: ''; position: absolute; left: -2rem; bottom: -1.5rem; width: 13rem; height: 8rem; opacity: .4; background: radial-gradient(ellipse at 20% 70%, #d995a4 0 7%, transparent 8%), radial-gradient(ellipse at 42% 45%, #c8798d 0 9%, transparent 10%), radial-gradient(ellipse at 75% 70%, #dfa9b4 0 8%, transparent 9%); pointer-events: none; }
+.about-photo-frame img { filter: saturate(.92) contrast(.98); }
+.about-belief-panel { background: linear-gradient(135deg, #76203a 0%, #842641 55%, #6a1b34 100%); }
+.about-belief-panel::after { content: ''; position: absolute; right: -2rem; bottom: -2.5rem; width: 14rem; height: 10rem; opacity: .34; background: radial-gradient(ellipse at 35% 60%, #d995a4 0 8%, transparent 9%), radial-gradient(ellipse at 64% 36%, #b96079 0 7%, transparent 8%), radial-gradient(ellipse at 85% 72%, #e3aeb7 0 8%, transparent 9%); filter: blur(.3px); pointer-events: none; }
+.reference-cta { background: linear-gradient(105deg, #78213d 0%, #8c2f4b 48%, #702039 100%); }
+.reference-cta::before { content: ''; position: absolute; left: -1rem; bottom: -2rem; width: 13rem; height: 7rem; opacity: .28; background: radial-gradient(ellipse at 20% 70%, #e0a6b2 0 8%, transparent 9%), radial-gradient(ellipse at 52% 45%, #bc647c 0 9%, transparent 10%), radial-gradient(ellipse at 78% 75%, #dda0ad 0 8%, transparent 9%); pointer-events: none; }
+.reference-footer { background: #fbf7f2; }
