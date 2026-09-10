@@ -173,3 +173,47 @@
 .reference-cta { background: linear-gradient(105deg, #78213d 0%, #8c2f4b 48%, #702039 100%); }
 .reference-cta::before { content: ''; position: absolute; left: -1rem; bottom: -2rem; width: 13rem; height: 7rem; opacity: .28; background: radial-gradient(ellipse at 20% 70%, #e0a6b2 0 8%, transparent 9%), radial-gradient(ellipse at 52% 45%, #bc647c 0 9%, transparent 10%), radial-gradient(ellipse at 78% 75%, #dda0ad 0 8%, transparent 9%); pointer-events: none; }
 .reference-footer { background: #fbf7f2; }
+
+/* Desktop art-direction pass: match the 853x1280 reference rhythm and contrast */
+@media (min-width: 901px) {
+  #main-navbar { padding-top: .42rem !important; padding-bottom: .42rem !important; height: 46px; }
+  #main-navbar > div { max-width: 1180px; height: 100%; }
+  #main-navbar #nav-logo-btn { transform: translateY(1px); }
+  #main-navbar #nav-logo-btn > div { height: 58px !important; width: 108px; }
+  #main-navbar nav { gap: 1.55rem; }
+  #main-navbar nav button { font-size: .68rem; }
+  #main-navbar #nav-book-test-ride-btn { padding: .52rem 1.25rem; font-size: .68rem; }
+  #hero-section { padding-top: 46px !important; background: #f7e2e2; }
+  #hero-section > div { min-height: 338px !important; height: 338px; }
+  #hero-section > div > div.relative { min-height: 338px !important; padding-top: 1.5rem; padding-bottom: 1.5rem; }
+  #hero-section h1 { font-size: 3.35rem; line-height: .94; }
+  #hero-section p { margin-top: .65rem; font-size: .76rem; max-width: 360px; }
+  #hero-section .mt-7 { margin-top: 1rem; }
+  #hero-section .mt-9 { margin-top: 1.25rem; padding-top: .8rem; }
+  #hero-section .mt-9 strong { font-size: 1.55rem; }
+  #hero-section .absolute.right-5 { top: 1rem; right: 3.5rem; }
+  #hero-section .absolute.right-5 .h-24 { height: 6.5rem; }
+  #hero-section .absolute.right-5 .text-3xl { font-size: 1.8rem; }
+  #models-showcase { padding-top: 1.25rem; padding-bottom: 1.2rem; }
+  #models-showcase > div { max-width: 780px; }
+  #models-showcase h2 { font-size: 2.1rem; }
+  #models-showcase .relative.text-center { margin-bottom: 1rem; }
+  #models-showcase article > button { aspect-ratio: 1.42; }
+  #models-showcase article > div { padding-top: .48rem; padding-bottom: .55rem; }
+  #models-showcase article h3 { font-size: .9rem; }
+  #models-showcase article .my-4 { margin-top: .48rem; margin-bottom: .48rem; padding-top: .42rem; padding-bottom: .42rem; }
+  #feature-strip { margin-top: .9rem; padding: .5rem .65rem; }
+  #feature-strip > div > div { padding: .25rem .45rem; }
+  .about-reference-grid { min-height: 214px; }
+  .about-story-panel { padding: 1rem 3rem; }
+  .about-photo-frame { flex-basis: 170px; height: 214px; }
+  .about-copy h3 { font-size: 1.75rem; }
+  .about-belief-panel { padding: 1.15rem 2.4rem; }
+  .belief-icons { padding-bottom: .65rem; }
+  .belief-quote { padding-top: .75rem; }
+  .belief-quote blockquote { font-size: 1.65rem; }
+  .reference-cta { padding-top: .9rem; padding-bottom: .9rem; }
+  .reference-cta h3 { font-size: 1.8rem; }
+  .reference-footer { min-height: 137px; }
+  .footer-inner { padding-top: .55rem; padding-bottom: .7rem; }
+}
